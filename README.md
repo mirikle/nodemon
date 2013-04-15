@@ -1,3 +1,9 @@
+# when installing without -g
+execute it with:
+    
+    node nodemon.js app.js
+
+
 # nodemon
 
 For use during development of a node.js based application. 
