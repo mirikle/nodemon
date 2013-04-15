@@ -1,7 +1,10 @@
 # =====Uniuqe to this branch======
 
-## when installing without -g
-execute it with:
+## Another way to use nodemon when the standard way doesn't work
+
+1. download nodemon.js into your own machine
+
+2. execute it with:
     
     node nodemon.js app.js
 or
