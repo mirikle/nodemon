@@ -1,4 +1,4 @@
-# ============Uniuqe to this branch==============
+# =====Uniuqe to this branch======
 
 ## when installing without -g
 execute it with:
@@ -10,6 +10,8 @@ or
 ## removal of the watchFileChecker.check is to avoid the error message "Error "watch ENOSYS" when using watch-switch".
 
 # ==============End==============
+
+
 
 # nodemon
 
