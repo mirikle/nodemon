@@ -47,13 +47,13 @@ var fs = require('fs'),
 
 // test to see if the version of find being run supports searching by seconds (-mtime -1s -print)
 var testAndStart = function() {
-  var ready = function () {
-    watchFileChecker.check(function(success) {
-      watchWorks = success;
+  var ready = function(){};
+  //var ready = function () {
+  //  watchFileChecker.check(function(success) {
+      watchWorks = true;
       startNode();
-    });
-  };
-
+  //  });
+  //};
   if (noWatch) {
     exec('find -L /dev/null -type f -mtime -1s -print', function(error, stdout, stderr) {
       if (error) {
@@ -150,6 +150,7 @@ watchFileChecker.check = function(cb) {
     cb(true);
     return;
   }
+  console.log(watchFileName);
   fs.watch(watchFileName, function(event, filename) {
     if (watchFileChecker.changeDetected) { return; }
     watchFileChecker.changeDetected = true;
@@ -471,6 +472,8 @@ function getNodemonArgs() {
       dir = process.cwd(),
       indexOfApp = -1,
       app = null;
+
+console.log("process.argv : " + args);
 
   for (; i < len; i++) {
     if (existsSync(path.resolve(dir, args[i]))) {
