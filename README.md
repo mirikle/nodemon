@@ -9,7 +9,7 @@ or
 
 ## removal of the watchFileChecker.check is to avoid the error message "Error "watch ENOSYS" when using watch-switch".
 
-# ==============End==============
+# ============End==============
 
 
 
